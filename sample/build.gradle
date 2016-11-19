@@ -5,11 +5,11 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.nostra13.universalimageloader"
+        applicationId "me.abala.codeup.androiddemo"
         minSdkVersion 5
         targetSdkVersion 22
         versionCode 40
-        versionName "1.9.5"
+        versionName "1.0.0"
     }
 
     useLibrary 'org.apache.http.legacy'
