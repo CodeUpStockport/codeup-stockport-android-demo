@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.fragment;
+package me.abala.codeup.androiddemo.fragment;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -33,8 +33,8 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
-import com.nostra13.universalimageloader.sample.Constants;
-import com.nostra13.universalimageloader.sample.R;
+import me.abala.codeup.androiddemo.Constants;
+import me.abala.codeup.androiddemo.R;
 
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)

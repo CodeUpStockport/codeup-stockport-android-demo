@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.widget;
+package me.abala.codeup.androiddemo.widget;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -25,10 +25,10 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
-import com.nostra13.universalimageloader.sample.R;
-import com.nostra13.universalimageloader.sample.UILApplication;
+import me.abala.codeup.androiddemo.R;
+import me.abala.codeup.androiddemo.UILApplication;
 
-import static com.nostra13.universalimageloader.sample.Constants.IMAGES;
+import static me.abala.codeup.androiddemo.Constants.IMAGES;
 
 /**
  * Example widget provider

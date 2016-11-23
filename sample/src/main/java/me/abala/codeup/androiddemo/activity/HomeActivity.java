@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.activity;
+package me.abala.codeup.androiddemo.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,12 +22,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.sample.Constants;
-import com.nostra13.universalimageloader.sample.R;
-import com.nostra13.universalimageloader.sample.fragment.ImageGalleryFragment;
-import com.nostra13.universalimageloader.sample.fragment.ImageGridFragment;
-import com.nostra13.universalimageloader.sample.fragment.ImageListFragment;
-import com.nostra13.universalimageloader.sample.fragment.ImagePagerFragment;
+import me.abala.codeup.androiddemo.Constants;
+import me.abala.codeup.androiddemo.R;
+import me.abala.codeup.androiddemo.fragment.ImageGalleryFragment;
+import me.abala.codeup.androiddemo.fragment.ImageGridFragment;
+import me.abala.codeup.androiddemo.fragment.ImageListFragment;
+import me.abala.codeup.androiddemo.fragment.ImagePagerFragment;
 import com.nostra13.universalimageloader.utils.L;
 
 import java.io.File;

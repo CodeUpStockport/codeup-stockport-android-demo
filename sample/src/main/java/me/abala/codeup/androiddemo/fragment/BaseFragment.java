@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.fragment;
+package me.abala.codeup.androiddemo.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,7 +21,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.sample.R;
+import me.abala.codeup.androiddemo.R;
 
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)

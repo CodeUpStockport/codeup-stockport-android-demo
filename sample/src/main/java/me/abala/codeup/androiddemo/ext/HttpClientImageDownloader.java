@@ -13,40 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.ext;
+package me.abala.codeup.androiddemo.ext;
 
 import android.content.Context;
-
-import com.nostra13.universalimageloader.core.assist.ContentLengthInputStream;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.ResponseBody;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.entity.BufferedHttpEntity;
 
 import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Implementation of ImageDownloader which uses {@link com.squareup.okhttp.OkHttpClient} for image stream retrieving.
+ * Implementation of ImageDownloader which uses {@link HttpClient} for image stream retrieving.
  *
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
- * @author Leo Link (mr[dot]leolink[at]gmail[dot]com)
  */
-public class OkHttpImageDownloader extends BaseImageDownloader {
+public class HttpClientImageDownloader extends BaseImageDownloader {
 
-	private OkHttpClient client;
+	private HttpClient httpClient;
 
-	public OkHttpImageDownloader(Context context, OkHttpClient client) {
+	public HttpClientImageDownloader(Context context, HttpClient httpClient) {
 		super(context);
-		this.client = client;
+		this.httpClient = httpClient;
 	}
 
 	@Override
 	protected InputStream getStreamFromNetwork(String imageUri, Object extra) throws IOException {
-		Request request = new Request.Builder().url(imageUri).build();
-		ResponseBody responseBody = client.newCall(request).execute().body();
-		InputStream inputStream = responseBody.byteStream();
-		int contentLength = (int) responseBody.contentLength();
-		return new ContentLengthInputStream(inputStream, contentLength);
+		HttpGet httpRequest = new HttpGet(imageUri);
+		HttpResponse response = httpClient.execute(httpRequest);
+		HttpEntity entity = response.getEntity();
+		BufferedHttpEntity bufHttpEntity = new BufferedHttpEntity(entity);
+		return bufHttpEntity.getContent();
 	}
 }

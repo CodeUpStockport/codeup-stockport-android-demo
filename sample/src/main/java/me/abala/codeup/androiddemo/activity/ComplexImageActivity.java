@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.nostra13.universalimageloader.sample.activity;
+package me.abala.codeup.androiddemo.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,9 +21,9 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import com.nostra13.universalimageloader.sample.R;
-import com.nostra13.universalimageloader.sample.fragment.ImageGridFragment;
-import com.nostra13.universalimageloader.sample.fragment.ImageListFragment;
+import me.abala.codeup.androiddemo.R;
+import me.abala.codeup.androiddemo.fragment.ImageGridFragment;
+import me.abala.codeup.androiddemo.fragment.ImageListFragment;
 
 /**
  * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)

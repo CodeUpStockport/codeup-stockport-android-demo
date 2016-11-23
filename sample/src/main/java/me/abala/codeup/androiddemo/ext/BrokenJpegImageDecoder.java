@@ -1,4 +1,4 @@
-package com.nostra13.universalimageloader.sample.ext;
+package me.abala.codeup.androiddemo.ext;
 
 import com.nostra13.universalimageloader.core.decode.BaseImageDecoder;
 import com.nostra13.universalimageloader.core.decode.ImageDecodingInfo;
