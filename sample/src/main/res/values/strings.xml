@@ -27,4 +27,6 @@
 	<!-- Content descriptions -->
 	<string name="descr_image">Image</string>
 
+	<!-- Error messages -->
+	<string name="err_failed_to_get_image_info">Failed to retrieve image information</string>
 </resources>
