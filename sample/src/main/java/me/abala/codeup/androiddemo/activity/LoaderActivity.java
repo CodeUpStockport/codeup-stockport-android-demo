@@ -14,8 +14,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Formatter;
 
 import me.abala.codeup.androiddemo.FlickrApi;
 import me.abala.codeup.androiddemo.R;
@@ -79,10 +82,35 @@ public class LoaderActivity extends Activity {
 
     private boolean readUrlsFromResponse(JSONObject response) {
         try {
-            Log.i("json", response.toString(2));
+            JSONArray photos = response.getJSONObject("photos").getJSONArray("photo");
+
+            int numPhotos = photos.length();
+            if (numPhotos == 0) {
+                throw new IllegalArgumentException("No photos returned :'(");
+            }
+
+            String[] photoUrls = new String[numPhotos];
+            for (int i = 0; i < numPhotos; i++) {
+                JSONObject photo = photos.getJSONObject(i);
+
+                String farmId = photo.getString("farm");
+                String serverId = photo.getString("server");
+                String id = photo.getString("id");
+                String secret = photo.getString("secret");
+
+                String photoUrl = String.format("https://farm%1$s.staticflickr.com/%2$s/%3$s_%4$s_b.jpg",
+                        farmId,
+                        serverId,
+                        id,
+                        secret);
+
+                photoUrls[i] = photoUrl;
+            }
+
             return true;
 
-        } catch (JSONException e) {
+        } catch (Exception e) {
+            Log.e("readUrlsFromResponse()", "Could not read URLs", e);
             return false;
         }
     }
