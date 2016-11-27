@@ -25,10 +25,10 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+
+import me.abala.codeup.androiddemo.PhotoUrls;
 import me.abala.codeup.androiddemo.R;
 import me.abala.codeup.androiddemo.UILApplication;
-
-import static me.abala.codeup.androiddemo.Constants.IMAGES;
 
 /**
  * Example widget provider
@@ -59,7 +59,7 @@ public class UILWidgetProvider extends AppWidgetProvider {
 
 		ImageSize minImageSize = new ImageSize(70, 70); // 70 - approximate size of ImageView in widget
 		ImageLoader.getInstance()
-				.loadImage(IMAGES[0], minImageSize, displayOptions, new SimpleImageLoadingListener() {
+				.loadImage(PhotoUrls.urls[0], minImageSize, displayOptions, new SimpleImageLoadingListener() {
 			@Override
 			public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
 				views.setImageViewBitmap(R.id.image_left, loadedImage);
@@ -67,7 +67,7 @@ public class UILWidgetProvider extends AppWidgetProvider {
 			}
 		});
 		ImageLoader.getInstance()
-				.loadImage(IMAGES[1], minImageSize, displayOptions, new SimpleImageLoadingListener() {
+				.loadImage(PhotoUrls.urls[1], minImageSize, displayOptions, new SimpleImageLoadingListener() {
 			@Override
 			public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
 				views.setImageViewBitmap(R.id.image_right, loadedImage);

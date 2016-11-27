@@ -36,6 +36,7 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import me.abala.codeup.androiddemo.Constants;
+import me.abala.codeup.androiddemo.PhotoUrls;
 import me.abala.codeup.androiddemo.R;
 
 import java.util.Collections;
@@ -71,7 +72,7 @@ public class ImageListFragment extends AbsListViewBaseFragment {
 
 	private static class ImageAdapter extends BaseAdapter {
 
-		private static final String[] IMAGE_URLS = Constants.IMAGES;
+		private static final String[] IMAGE_URLS = PhotoUrls.urls;
 
 		private LayoutInflater inflater;
 		private ImageLoadingListener animateFirstListener = new AnimateFirstDisplayListener();

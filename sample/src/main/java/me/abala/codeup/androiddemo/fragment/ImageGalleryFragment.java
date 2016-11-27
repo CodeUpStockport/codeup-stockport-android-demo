@@ -32,6 +32,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 import me.abala.codeup.androiddemo.Constants;
+import me.abala.codeup.androiddemo.PhotoUrls;
 import me.abala.codeup.androiddemo.R;
 import me.abala.codeup.androiddemo.activity.SimpleImageActivity;
 
@@ -67,7 +68,7 @@ public class ImageGalleryFragment extends BaseFragment {
 
 	private static class ImageAdapter extends BaseAdapter {
 
-		private static final String[] IMAGE_URLS = Constants.IMAGES;
+		private static final String[] IMAGE_URLS = PhotoUrls.urls;
 
 		private LayoutInflater inflater;
 

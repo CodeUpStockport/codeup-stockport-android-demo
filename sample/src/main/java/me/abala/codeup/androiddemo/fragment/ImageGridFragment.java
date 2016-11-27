@@ -33,6 +33,7 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import me.abala.codeup.androiddemo.Constants;
+import me.abala.codeup.androiddemo.PhotoUrls;
 import me.abala.codeup.androiddemo.R;
 
 /**
@@ -58,7 +59,7 @@ public class ImageGridFragment extends AbsListViewBaseFragment {
 
 	private static class ImageAdapter extends BaseAdapter {
 
-		private static final String[] IMAGE_URLS = Constants.IMAGES;
+		private static final String[] IMAGE_URLS = PhotoUrls.urls;
 
 		private LayoutInflater inflater;
 

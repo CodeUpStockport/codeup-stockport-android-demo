@@ -21,6 +21,7 @@ import org.json.JSONObject;
 import java.util.Formatter;
 
 import me.abala.codeup.androiddemo.FlickrApi;
+import me.abala.codeup.androiddemo.PhotoUrls;
 import me.abala.codeup.androiddemo.R;
 
 /**
@@ -106,6 +107,8 @@ public class LoaderActivity extends Activity {
 
                 photoUrls[i] = photoUrl;
             }
+
+            PhotoUrls.urls = photoUrls;
 
             return true;
 
