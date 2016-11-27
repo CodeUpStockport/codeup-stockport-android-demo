@@ -1,5 +1,18 @@
 A hacked up version of the sample application from [Universal Image Loader](https://github.com/nostra13/Android-Universal-Image-Loader) for demonstration at [CodeUp Stockport](http://codeupmcr.co.uk/category/stockport/).
 
+## Useful URLs
+
+* [CodeUp Stockport Android Demo](https://github.com/arunanbala/codeup-stockport-android-demo)
+* [Android Studio IDE](https://developer.android.com/studio/index.html)
+* [Android Tutorial](https://developer.android.com/training/index.html)
+* [Flickr API](https://www.flickr.com/services/api/)
+
+## Next Steps
+
+* Choose an image size appropriate to the device
+* Show image metadata
+* Browse images by date
+
 ## License
 
     Copyright 2016 Arunan Balasubramaniam
